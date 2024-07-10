@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import { colors } from "@/styles/colors";
+import { colors } from "@styles/colors";
 
 //TODO: Colors
 const config: Config = {
