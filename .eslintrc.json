@@ -5,6 +5,7 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "no-undef": "off"
+    "no-undef": "off",
+    "no-console": "off"
   }
 }
