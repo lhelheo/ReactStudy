@@ -1,6 +1,6 @@
 import { cx } from "@/utils/tailwind";
 import { ReactNode } from "react";
-import { tv, VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const buttonVariants = tv({
   base: [
@@ -12,6 +12,8 @@ export const buttonVariants = tv({
     color: {
       primary:
         "text-white bg-primary hover:bg-opacity-80 disabled:bg-opacity-70",
+      secondary:
+        "text-primary bg-white border border-primary hover:bg-opacity-90 disabled:bg-opacity-70",
     },
     size: {
       sm: "text-xs px-2 py-1",
@@ -20,18 +22,21 @@ export const buttonVariants = tv({
     },
   },
   defaultVariants: {
+    type: "button",
     color: "primary",
     size: "md",
   },
 });
 
-interface ButtonProps {
-  type?: HTMLButtonElement["type"];
+export interface ButtonProps {
+  type?: "button" | "submit" | "reset";
   className?: string;
   disabled?: boolean;
+  onClick?: () => void;
   children: ReactNode;
   icon?: ReactNode;
-  variant?: VariantProps<typeof buttonVariants>;
+  color?: "primary" | "secondary";
+  size?: "sm" | "md" | "lg";
   loading?: {
     isActive: boolean;
     text: string;
@@ -39,12 +44,13 @@ interface ButtonProps {
 }
 
 export const Button = (props: ButtonProps) => {
+  const { color, size } = props;
   let isLoading = props.loading ? props.loading.isActive : false;
 
   return (
     <button
       type={props.type}
-      className={cx(buttonVariants({ ...props.variant }), props.className)}
+      className={cx(buttonVariants({ color, size }), props.className)}
       disabled={props.disabled || isLoading}
     >
       {props.icon || null}
