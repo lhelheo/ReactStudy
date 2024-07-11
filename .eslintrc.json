@@ -2,7 +2,8 @@
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended"
   ],
   "rules": {
     "no-undef": "off",
