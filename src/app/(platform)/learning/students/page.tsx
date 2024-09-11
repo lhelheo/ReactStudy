@@ -1,4 +1,3 @@
-import { Badge } from "@/components/raw/badge";
 import { studentsData } from "@/utils/data/students";
 
 export default function StudentsTable() {
