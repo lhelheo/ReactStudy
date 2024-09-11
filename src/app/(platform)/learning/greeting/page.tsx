@@ -13,9 +13,9 @@ export default function Greeting() {
       <p className="text-5xl">
         {hours}:{minutes}:{seconds}
       </p>
-      {isMorning && "Good Morning"}
-      {isAfternoon && "Good afternoon"}
-      {isNight && "Good night"}
+      {isMorning && "Good Morning😉"}
+      {isAfternoon && "Good afternoon😁"}
+      {isNight && "Good night😴"}
     </div>
   );
 }
