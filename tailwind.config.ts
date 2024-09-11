@@ -8,9 +8,9 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/raw/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    colors,
-  },
+  // theme: {
+  //   colors,
+  // },
   plugins: [],
 };
 export default config;
