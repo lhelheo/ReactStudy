@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from ".";
 
 const meta: Meta<typeof Button> = {
-  title: "Button",
+  title: "Raw/Button",
   component: Button,
   parameters: {
     docs: {
@@ -49,5 +49,23 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     color: "secondary",
+  },
+};
+
+export const Neutral: Story = {
+  args: {
+    color: "neutral",
+  },
+};
+
+export const Warn: Story = {
+  args: {
+    color: "warn",
+  },
+};
+
+export const Danger: Story = {
+  args: {
+    color: "danger",
   },
 };
